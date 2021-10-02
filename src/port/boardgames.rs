@@ -1,8 +1,6 @@
 use crate::domain::boardgames::Boardgames;
 
-use mockall::*;
-
-#[automock]
+#[mry::mry]
 pub trait BoardgamesPort {
     fn find_all(&self) -> Result<Boardgames, String>;
 }
